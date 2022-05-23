@@ -22,10 +22,29 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(      
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: const [TopBarFb3(title: 'Welcome back,', upperTitle: 'User')],
+    return Scaffold(
+      backgroundColor: Colors.black26,
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [TopBarFb3(title: 'Welcome back,', upperTitle: 'User')],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_sharp),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_sharp),
+            label: 'New Game',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.scoreboard_sharp),
+            label: 'Scores',
+          ),
+        ],
+      ),
     );
   }
 }
