@@ -30,6 +30,9 @@ class HomePage extends StatelessWidget {
         children: const [TopBarFb3(title: 'Welcome back,', upperTitle: 'User')],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedIconTheme: const IconThemeData(color: Colors.blueGrey),
+        selectedItemColor: Colors.blueGrey,
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_sharp),
