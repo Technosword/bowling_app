@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 void main() {
   runApp(const BowlingApp());
 }
@@ -11,43 +13,8 @@ class BowlingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Bowling App',
-      theme: ThemeData(primarySwatch: Colors.teal),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black26,
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: const [TopBarFb3(title: 'Welcome back,', upperTitle: 'User')],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedIconTheme: const IconThemeData(color: Colors.blueGrey),
-        selectedItemColor: Colors.blueGrey,
-        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_sharp),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add_sharp),
-            label: 'New Game',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.scoreboard_sharp),
-            label: 'Scores',
-          ),
-        ],
-      ),
+      theme: ThemeData(primarySwatch: Colors.black),
+      home: HomeScreen(),
     );
   }
 }
