@@ -13,8 +13,8 @@ class BowlingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Bowling App',
-      theme: ThemeData(primarySwatch: Colors.black),
-      home: HomeScreen(),
+      theme: ThemeData(primaryColor: Colors.black12),
+      home: const HomeScreen(),
     );
   }
 }
