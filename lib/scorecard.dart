@@ -10,7 +10,11 @@ class ScoreCard extends StatefulWidget {
   State<ScoreCard> createState() => _ScoreCardState();
 }
 
-class _ScoreCardState extends State<ScoreCard> {
+class _ScoreCardState extends State<ScoreCard>
+    with AutomaticKeepAliveClientMixin<ScoreCard> {
+  @override
+  bool get wantKeepAlive => true;
+
   late List<Frame> frames = [];
   TextInputFormatter allowedCharsFilter =
       FilteringTextInputFormatter.allow(RegExp("[0-9/Xx-]"));
@@ -29,6 +33,7 @@ class _ScoreCardState extends State<ScoreCard> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     Widget singleItemList(int index) {
       return Container(
         height: 65,
